@@ -39,3 +39,39 @@ ul#main-menu a{
     right: 0;
     border-bottom: 1px solid white;
 }
+
+swiper-container {
+    width: 100%;
+    height: 500px;
+    margin-top: 80px;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.containers-app{
+    display: flex;
+    flex-direction: column;
+}
+/* .mySwiper{
+    margin-top: 80px;
+}
+.swiper-container swiper-wrapper img{
+    object-fit: cover;
+}*/
+.mySwiper img{
+    width: 100%;
+    height: 510px;
+} 
