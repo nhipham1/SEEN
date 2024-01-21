@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+    color: white
+}
+.black-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 80px;
+}
+ul#main-menu{
+    display: flex;
+}
+ul#main-menu a{
+    text-transform: uppercase;
+    padding: 10px 20px
+    
+}
+.logo{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 2px ;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid white;
+}
