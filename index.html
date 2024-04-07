@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>MyShop</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css">
   <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script> -->
@@ -15,38 +15,23 @@
   <div class="containers-app">
     <div class="header">
       <div class="black-header">
-        <!-- <div class="nut">
-          <button type="button">
-            <div id="one"></div>
-            <div id="two"></div>
-            <div id="three"></div>
-
-          </button>
-        </div> -->
-        <!-- <div class="menu">
-          <div class="ul">
-            <ul>
-              <li>DATA MANAGEMENT</li>
-              <li>LOCATION</li>
-              <li>STUDY</li>
-              <li>COLLECTIONS</li>
-              <li>CREDITS</li>
-            </ul>
-          </div>
-        </div> -->
-        <!-- <div class="manhinhden">
-
-        </div> -->
-        <a href="" class="logo" style="margin-left: 10px;">M Y S H O P</a>
-
-        <i class="gg-search" style="color: #f5f5f5;"></i>
-        <input type="search" placeholder="Tìm kiếm..."
-          style="position: absolute; top: 32px; bottom: 29px; left: 281px; background-color: transparent; border: none; color: black;" />
-        <nav>
+       
+        <a href="" class="logo" >M Y S H O P</a>
+        <div class="search-bar" style="width: 20%;">
+          
+          <i class="gg-search" style="color: #f5f5f5;"></i>
+          <input id="search" type="search" placeholder="Tìm kiếm..."
+          style="color: white; position: absolute; top: 32px; bottom: 29px; left: 281px; background-color: transparent; border: none; color: black;" />
+          <button onclick="test()"> enter</button>
+        </div>
+        <nav class="menu-bar" style="width: 80%;">
           <ul id="main-menu">
             <li><a href="">Trang chủ</a></li>
             <li><a href="">Giới thiệu</a></li>
-            <li><a href="">Sản phẩm</a></li>
+            <li style="color: #f5f5f5">SẢN PHẨM</li>
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- <li><a href="">Sản phẩm</a></li> -->
             <li><a href="">Danh mục</a></li>
             <li class="btn-logout" id="show-logout">
               <button onclick="handleLogout()">
@@ -58,15 +43,18 @@
               </button>
             </li>
             <li id="login-register"><a href="dnhap-dki1.html">Đăng kí/Đăng nhập</a></li>
-            <li><a href=""><svg width="32" height="32" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <li>
+              <a href=""><svg width="32" height="32" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                   <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                     stroke-width="4"
                     d="M24 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14M6 40.8V42h36v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496C35.92 28 33.68 28 29.2 28H18.8c-4.48 0-6.72 0-8.432.872a8 8 0 0 0-3.496 3.496C6 34.08 6 36.32 6 40.8" />
-                </svg></a></li>
+                </svg></a>
+            </li>
 
           </ul>
 
         </nav>
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 16 16"><path fill="#ffffff" fill-rule="evenodd" d="M1.25 3.25A.75.75 0 0 1 2 2.5h12A.75.75 0 0 1 14 4H2a.75.75 0 0 1-.75-.75m0 4.75A.75.75 0 0 1 2 7.25h12a.75.75 0 0 1 0 1.5H2A.75.75 0 0 1 1.25 8M2 12a.75.75 0 0 0 0 1.5h12a.75.75 0 0 0 0-1.5z" clip-rule="evenodd"/></svg>
       </div>
 
 
@@ -110,47 +98,21 @@
 
     <div class="content">
 
-      <div class="checkbox" style="border: 1px solid black;">
-        <div class="checkbox-inside">
-          <input type="checkbox" id="croptop">
-          <label for="croptop"> Áo croptop</label><br>
-          <input type="checkbox" id="yarn">
-          <label for="yarn"> Áo len</label><br>
-          <input type="checkbox" id="váy">
-          <label for="váy"> Váy </label><br>
-          <input type="checkbox" id="shirt">
-          <label for="shirt"> Áo thun</label><br>
-          <input type="checkbox" id="t-shirt">
-          <label for="t-shirt"> Sơ mi</label><br>
-          <input type="checkbox" id="jeans">
-          <label for="jeans"> Quần jeans </label><br>
-          <input type="checkbox" id="tote-bag">
-          <label for="tote Bag">Túi tote</label><br>
-          <input type="checkbox" id="đầm">
-          <label for="đầm"> Đầm</label><br>
-          <input type="checkbox" id="coat">
-          <label for="coat"> Áo khoác </label><br>
-          <input type="checkbox" id="cardigan">
-          <label for="cardigan"> Cardigan</label><br>
-          <input type="checkbox" id="yarn">
-          <label for="yarn"> Áo len</label><br>
-          <input type="checkbox" id="váy">
-          <label for="vehicle3"> Váy </label><br>
-        </div>
 
+
+    </div>
+    <div class="column-right">
+      <div class="title" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 800; display: flex;">
+        <div class="title-1" style="font-style: oblique; font-size: 35px;">
+          New Collection
+        </div>
+        <div class="title-2">
+          _______________________________________________________________________________________________
+        </div>
       </div>
-      <div class="column-right">
-        <div class="title" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 800; display: flex;">
-          <div class="title-1">
-            New Collection
-          </div>
-          <div class="title-2">
-            ________________________________________________________
-          </div>
-        </div>
 
-        <div class="card-group" id="card-group">
-          <!-- <div class="card">
+      <div class="card-group" id="card-group">
+        <!-- <div class="card">
           <img class="card-img-top" src="..." alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -176,75 +138,74 @@
         </div>
          -->
 
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row-app">
+        <div class="col-sm-6 col-md-6">
+          <h6>Về chúng tôi</h6>
+          <p class="text-justify"><i>Shop Thời Trang MyShop</i> với phương châm "Đồng hành cùng phong cách thời trang
+            của bạn" sẽ là nơi mua sắm an toàn và uy tín, bởi chúng tôi luôn đề cao tiêu chí mang đến cho quý khách
+            những sản phẩm chất lượng nhất với giá cả luôn phải chăng. </p>
         </div>
 
+        <div class="col-sm-6 col-md-3">
+          <h6>Hỗ trợ</h6>
+          <ul class="footer-links">
+            <li><a href="">Câu hỏi thường gặp</a></li>
+            <li><a href="">Chăm sóc sản phẩm</a></li>
+            <li><a href="">Cửa hàng</a></li>
+            <li><a href="">Dịch vụ cá nhân hóa</a></li>
+            <li><a href="">Nghệ thuật tặng quà</a></li>
+            <li><a href="">Templates</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="">Về chúng tôi</a></li>
+            <li><a href="">Liên hệ với chúng tôi</a></li>
+            <li><a href="">Góp ý</a></li>
+            <!-- <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Sitemap</a></li> -->
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row-app">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                </svg></a></li>
+            <li><a class="twitter" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                </svg></a></li>
+            <li><a class="dribbble" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                </svg></a></li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <!-- Site footer -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row-app">
-          <div class="col-sm-6 col-md-6">
-            <h6>About</h6>
-            <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help the upcoming
-              programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code
-              wants to be simple. We will help programmers build up concepts in different programming languages that
-              include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
-          </div>
-
-          <div class="col-sm-6 col-md-3">
-            <h6>Categories</h6>
-            <ul class="footer-links">
-              <li><a href="">C</a></li>
-              <li><a href="">UI Design</a></li>
-              <li><a href="">PHP</a></li>
-              <li><a href="">Java</a></li>
-              <li><a href="">Android</a></li>
-              <li><a href="">Templates</a></li>
-            </ul>
-          </div>
-
-          <div class="col-sm-6 col-md-3">
-            <h6>Quick Links</h6>
-            <ul class="footer-links">
-              <li><a href="">About Us</a></li>
-              <li><a href="">Contact Us</a></li>
-              <li><a href="">Contribute</a></li>
-              <li><a href="">Privacy Policy</a></li>
-              <li><a href="">Sitemap</a></li>
-            </ul>
-          </div>
-        </div>
-        <hr>
-      </div>
-      <div class="container">
-        <div class="row-app">
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="facebook" href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-facebook" viewBox="0 0 16 16">
-                    <path
-                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-                  </svg></a></li>
-              <li><a class="twitter" href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-twitter" viewBox="0 0 16 16">
-                    <path
-                      d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
-                  </svg></a></li>
-              <li><a class="dribbble" href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-instagram" viewBox="0 0 16 16">
-                    <path
-                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                  </svg></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+  </footer>
   </div>
 
 </body>

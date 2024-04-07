@@ -1,25 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var nut = document.querySelectorAll("button");
-    var nut = nut[0];
-    var menu = document.querySelectorAll(".menu");
-    var menu = menu[0];
-    var manhinhden = document.querySelectorAll(".manhinhden");
-    var manhinhden = manhinhden[0];
-    nut.onclick = function () {
-        menu.classList.add('menuhienra');
-        manhinhden.classList.add('manhinhdenhienra');
-    }
-    manhinhden.onclick = function () {
-        manhinhden.classList.remove('manhinhdenhienra');
-        menu.classList.remove('menuhienra');
-    }
-}, false)
+// document.addEventListener("DOMContentLoaded", function () {
+//     var nut = document.querySelectorAll("button");
+//     var nut = nut[0];
+//     var menu = document.querySelectorAll(".menu");
+//     var menu = menu[0];
+//     var manhinhden = document.querySelectorAll(".manhinhden");
+//     var manhinhden = manhinhden[0];
+//     nut.onclick = function () {
+//         menu.classList.add('menuhienra');
+//         manhinhden.classList.add('manhinhdenhienra');
+//     }
+//     manhinhden.onclick = function () {
+//         manhinhden.classList.remove('manhinhdenhienra');
+//         menu.classList.remove('menuhienra');
+//     }
+// }, false)
 let htmlProduct = "";
-
+var data =[];
 fetch('https://api.myjson.online/v1/records/66712e0a-04de-44bc-8f37-4dbd638c21f0')
     .then((res) => res.json())
     .then((response) => {
-        console.log("🤔🤔🤔 ~ response:", response.data)
+        data = response.data
         for (let i = 0; i < response.data.length; i++) {
             htmlProduct +=
                 `
@@ -27,7 +27,7 @@ fetch('https://api.myjson.online/v1/records/66712e0a-04de-44bc-8f37-4dbd638c21f0
             <img class="img-pro" src="${response.data[i].image}"/>
             <div class="card-body">
                     <h5 class="card-title">${response.data[i].namePro}</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    ${response.data[i].desc}
                     <p class="card-text price">Price: ${response.data[i].price}</p>
                 <button class="button-28" role="button">Detail</button>    
             </div>
@@ -85,3 +85,17 @@ function handleLogout() {
     localStorage.setItem('isLogin', false) // lưu trang thái đăng nhập isLogin dưới localStorage lại thành false nghĩa là chưa đăng nhập
     window.location.reload() // load lại trang
 }
+
+
+let nameProduct = "đầm"
+const test = () => {
+    let getData = document.getElementById("search").value;
+    const arr2 = data.filter((item) => {
+        return item.namePro.toUpperCase().includes(getData.toUpperCase());
+    })
+    console.log("🚀 ~ arr2 ~ arr2:", arr2)
+
+    
+
+}
+
